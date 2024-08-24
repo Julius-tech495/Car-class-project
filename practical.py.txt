@@ -1,0 +1,81 @@
+
+
+class Car:
+    def __init__(self, make, model, year, color):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.color = color
+
+    def display_details(self):
+        print(f"Make: {self.make}")
+        print(f"Model: {self.model}")
+        print(f"Year: {self.year}")
+        print(f"Color: {self.color}")
+
+    def update_color(self, new_color):
+        self.color = new_color
+
+# Create multiple Car objects
+car1 = Car("Toyota", "Corolla", 2020, "Red")
+car2 = Car("Honda", "Civic", 2018, "Silver")
+car3 = Car("Ford", "Mustang", 2022, "Black")
+
+# Display details of each car
+print("Car 1 Details:")
+car1.display_details()
+
+print("\nCar 2 Details:")
+car2.display_details()
+
+print("\nCar 3 Details:")
+car3.display_details()
+
+# Update color of car1 and display updated details
+car1.update_color("Blue")
+print("\nUpdated Car 1 Details:")
+car1.display_details()
+
+# Prompt user input and create a new Car object
+print("\nEnter details for a new car:")
+make = input("Make: ")
+model = input("Model: ")
+year = int(input("Year: "))
+color = input("Color: ")
+
+new_car = Car(make, model, year, color)
+print("\nNew Car Details:")
+new_car.display_details()
+
+
+
+
+""" CODE EXPLANATION
+
+DEFINING A CAR CLASS
+
+The code defines a `Car` class with attributes:
+ `make`, `model`, `year`, and `color`. It has two methods:
+
+-display_details`: prints the car's details
+- update_color`: updates the car's color
+
+CREATING CAR OBJECT
+The code creates three `Car` objects:
+ `car1`, `car2`, and `car3` with different attributes.
+
+DISPLAYING AND UPDATING CAR DETAILS
+The code displays the details of each car using
+ `display_details` and updates `car1`'s color using `update_color`.
+
+USER INPUT
+The code prompts the user to input details for a new car
+ and creates a new `Car` object with those details.
+
+In summary, the code defines a `Car` class, creates objects, 
+displays and updates their details, and allows user input to create a new car. """
+
+
+
+
+
